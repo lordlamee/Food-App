@@ -1,11 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_app/styles.dart';
+import 'package:food_app/constants.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
+     screenSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         leading: Icon(
