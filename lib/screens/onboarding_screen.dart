@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:food_app/styles.dart';
 
 import '../constants.dart';
+import '../custom_widgets.dart';
 
 class OnBoardingScreen extends StatefulWidget {
   @override
@@ -16,7 +17,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    screenSize = MediaQuery.of(context).size;
+    screenSize = MediaQuery
+        .of(context)
+        .size;
     return Scaffold(
       body: Container(
         padding: EdgeInsets.fromLTRB(20, 60, 20, 0),
@@ -75,57 +78,54 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
-                Container(
-                  height: 10,
-                  width: 10,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: page == 0 ? lightRed : Colors.black,
-                  ),
-                ),
+                PageNotifierShape(
+                    color: page == 0 ? lightRed : Colors.black,),
                 SizedBox(
                   width: 3,
                 ),
-                Container(
-                  height: 10,
-                  width: 10,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: page == 1 ? lightRed : Colors.black,
-                  ),
-                ),
+                PageNotifierShape(color: page == 1 ? lightRed : Colors.black,),
                 SizedBox(
                   width: 3,
                 ),
-                Container(
-                  height: 10,
-                  width: 10,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: page == 2 ? lightRed : Colors.black,
-                  ),
+                PageNotifierShape(
+                  color: page == 2 ? lightRed : Colors.black,
                 ),
               ],
             ),
             SizedBox(
               height: 30,
             ),
-            RawMaterialButton(
-              padding: EdgeInsets.all(10),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(25)),
-              constraints:
-                  BoxConstraints.tightFor(width: screenSize.width, height: 50),
-              elevation: 5,
-              onPressed: () {
-                //Todo: Implement Get Started Function
+            LongButton(
+              label: 'Get started here',
+              onPressed: (){
+                //:Todo Implement get started function
               },
-              fillColor: lightRed,
-              child: Text('Get started here', style: textStyle2),
             ),
             Spacer()
           ],
         ),
+      ),
+    );
+  }
+}
+
+class PageNotifierShape extends StatelessWidget {
+  const PageNotifierShape({
+    Key key,
+    this.color
+  }) : super(key: key);
+
+
+  final Color color;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 10,
+      width: 10,
+      decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: color
       ),
     );
   }

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/screens/home_screen.dart';
+import 'package:food_app/screens/login_screen.dart';
 import 'package:food_app/screens/onboarding_screen.dart';
 
 void main() {
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
         appBarTheme: AppBarTheme(
           color: Colors.white,
         ),
-        scaffoldBackgroundColor: Color(0xFFFBFBFB),
+        scaffoldBackgroundColor: Color(0xFFFAFAFA),
       ),
       home: OnBoardingScreen(),
     );
