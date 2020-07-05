@@ -9,6 +9,7 @@ class ForgotPassword extends StatelessWidget {
     screenSize = MediaQuery.of(context).size;
     return Scaffold(
       body: SingleChildScrollView(
+        physics: NeverScrollableScrollPhysics(),
         child: Container(
           constraints: BoxConstraints.tight(screenSize),
           padding: EdgeInsets.fromLTRB(20, 60, 20, 0),
