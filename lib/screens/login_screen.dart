@@ -108,30 +108,3 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
-
-class LoginTextField extends StatelessWidget {
-  const LoginTextField({
-    Key key,this.hintText,this.prefixIcon
-  }) : super(key: key);
-final String hintText;
-final Icon prefixIcon;
-  @override
-  Widget build(BuildContext context) {
-    return Material(
-      elevation: 5,
-      borderRadius: BorderRadius.circular(25),
-      child: TextFormField(
-        decoration: InputDecoration(
-          filled: true,
-          fillColor: Colors.white,
-          hintText: hintText,
-          contentPadding: EdgeInsets.fromLTRB(8, 5, 0, 5),
-          border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(25),
-              borderSide: BorderSide.none),
-          prefixIcon: prefixIcon,
-        ),
-      ),
-    );
-  }
-}

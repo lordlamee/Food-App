@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/screens/home_screen.dart';
+import 'package:food_app/screens/forgot_password_screen.dart';
+
 
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
         ),
         scaffoldBackgroundColor: Color(0xFFFAFAFA),
       ),
-      home: HomeScreen(),
+      home: ForgotPassword(),
     );
   }
 }

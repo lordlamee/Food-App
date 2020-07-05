@@ -7,3 +7,8 @@ const textStyle2 = TextStyle(
     fontWeight: FontWeight.bold,
     fontSize: 17);
 const lightRed = Color(0xFFFF2020);
+const textStyle3 = TextStyle(
+    color: Colors.black,
+    fontWeight: FontWeight.bold,
+    fontSize: 24);
+
