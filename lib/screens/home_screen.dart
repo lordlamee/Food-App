@@ -31,6 +31,7 @@ class HomeScreen extends StatelessWidget {
         centerTitle: true,
       ),
       body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
         child: Container(
           padding: EdgeInsets.only(top: 15),
           constraints: BoxConstraints.tight(screenSize),
