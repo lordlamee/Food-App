@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:food_app/screens/forgot_password_screen.dart';
+import 'package:food_app/screens/home_screen.dart';
 
 import '../constants.dart';
 import '../custom_widgets.dart';
@@ -83,8 +86,13 @@ class LoginScreen extends StatelessWidget {
                     Text('Remember Me'),
                   ],
                 ),
-                Text('Forgot Password?',
-                style: textStyle1,)
+                InkResponse(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> ForgotPassword()));
+                  },
+                  child: Text('Forgot Password?',
+                  style: textStyle1,),
+                )
               ],
             ),
             SizedBox(
@@ -93,6 +101,9 @@ class LoginScreen extends StatelessWidget {
             LongButton(
               label: 'Log In',
               onPressed: (){
+                Navigator.push(context, CupertinoPageRoute(
+                  builder: (context) => HomeScreen()
+                ));
                 //:Todo Implement Log In function
               },
             ),

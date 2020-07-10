@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:food_app/screens/login_screen.dart';
 import 'package:food_app/styles.dart';
 
 import '../constants.dart';
@@ -98,6 +99,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             LongButton(
               label: 'Get started here',
               onPressed: (){
+                Navigator.push(context,CupertinoPageRoute(
+                  builder: (context) => LoginScreen()
+                ) );
                 //:Todo Implement get started function
               },
             ),
